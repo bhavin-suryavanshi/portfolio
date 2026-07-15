@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Bhavin Suryavanshi — Data Analyst Portfolio | SQL, Python, Power BI</title>
+  <meta name="description" content="Portfolio of Bhavin Suryavanshi — aspiring Data Analyst skilled in SQL, Python, Power BI, and Excel. BCA student at Sigma University, Vadodara. Open to internship and entry-level roles.">
+  <meta name="keywords" content="Bhavin Suryavanshi, Data Analyst, SQL, Python, Power BI, Excel, Portfolio, BCA, Sigma University, Vadodara">
+  <meta name="author" content="Bhavin Suryavanshi">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bhavinsuryavanshi.com">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bhavin Suryavanshi — Data Analyst Portfolio">
+  <meta property="og:description" content="Aspiring Data Analyst skilled in SQL, Python, Power BI & Excel. Turning raw data into decisions — one dashboard at a time.">
+  <meta property="og:image" content="profile.png">
+  <meta property="og:url" content="https://bhavinsuryavanshi.com">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bhavin Suryavanshi",
+    "jobTitle": "Aspiring Data Analyst",
+    "url": "https://bhavinsuryavanshi.com",
+    "email": "bhavinsuryavanshi713@gmail.com",
+    "telephone": "+918511812257",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Vadodara",
+      "addressRegion": "Gujarat",
+      "addressCountry": "IN"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Sigma University"
+    },
+    "knowsAbout": ["SQL", "Python", "Power BI", "Excel", "Data Analysis", "Dashboard Development"]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div class="loader-screen" id="loader" aria-hidden="true">
+  <div class="loader-bars">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="loader-text">Loading Portfolio…</div>
+</div>
+
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- Particle Canvas -->
+<canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+<!-- Cursor Glow -->
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<!-- Skip Navigation (A11y) -->
+<a href="#main-content" class="skip-nav" id="skipNav">Skip to main content</a>
+
+<!-- ─── HEADER / NAV ──────────────────────────────────────── -->
+<header role="banner">
+  <nav class="wrap" aria-label="Primary navigation">
+    <a href="#" class="brand" aria-label="Bhavin Suryavanshi — Home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      Bhavin Suryavanshi
+    </a>
+    <ul class="nav-links" id="navLinks" role="menubar">
+      <li role="none"><a href="#about" role="menuitem">About</a></li>
+      <li role="none"><a href="#experience" role="menuitem">Experience</a></li>
+      <li role="none"><a href="#education" role="menuitem">Education</a></li>
+      <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
+      <li role="none"><a href="#skills" role="menuitem">Skills</a></li>
+      <li role="none"><a href="#achievements" role="menuitem">Achievements</a></li>
+      <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+      <span aria-hidden="true">☰</span>
+    </button>
+  </nav>
+</header>
+
+<!-- ─── MAIN CONTENT ──────────────────────────────────────── -->
+<main id="main-content">
+
+  <!-- ─── HERO ──────────────────────────────────────────────── -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow reveal">Aspiring Data Analyst</div>
+        <h1 id="hero-heading" class="reveal">
+          Turning raw data into <span id="typingText">decisions</span><span class="typing-cursor" aria-hidden="true"></span> — one dashboard at a time.
+        </h1>
+        <p class="lead reveal">BCA student building a foundation in SQL, Python and Power BI. I clean messy spreadsheets, model KPIs, and ship dashboards that make business questions answerable.</p>
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn btn-primary" id="btn-view-projects">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            View Projects
+          </a>
+          <a href="#contact" class="btn btn-ghost" id="btn-get-in-touch">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Get in Touch
+          </a>
+        </div>
+        <div class="hero-meta reveal">
+          <span>📍 Vadodara, Gujarat</span>
+          <a href="tel:+918511812257" aria-label="Call Bhavin at +91 85118 12257">+91 85118 12257</a>
+          <a href="mailto:bhavinsuryavanshi713@gmail.com" aria-label="Email Bhavin">bhavinsuryavanshi713@gmail.com</a>
+          <a href="https://www.linkedin.com/in/bhavinsuryavanshi/" target="_blank" rel="noopener noreferrer" aria-label="Bhavin's LinkedIn profile">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" style="width:14px;height:14px;vertical-align:-2px;margin-right:3px;stroke:currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/bhavin-suryavanshi" target="_blank" rel="noopener noreferrer" aria-label="Bhavin's GitHub profile">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" style="width:14px;height:14px;vertical-align:-2px;margin-right:3px;stroke:currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="kpi-card reveal-scale">
+        <div class="kpi-card-head">
+          <span><span class="kpi-dot" aria-hidden="true"></span>live_metrics.dashboard</span>
+          <span>BCA · Sem 5</span>
+        </div>
+        <div class="kpi-grid">
+          <div class="kpi-stat" data-tooltip="Current academic performance">
+            <div class="num" data-count="7.46">0</div>
+            <div class="label">Current CGPA</div>
+          </div>
+          <div class="kpi-stat" data-tooltip="Industry certifications">
+            <div class="num" data-count="4" data-suffix="+">0</div>
+            <div class="label">Certifications</div>
+          </div>
+          <div class="kpi-stat" data-tooltip="End-to-end dashboard projects">
+            <div class="num" data-count="2">0</div>
+            <div class="label">BI Projects</div>
+          </div>
+          <div class="kpi-stat" data-tooltip="Expected graduation">
+            <div class="num" data-count="2027">0</div>
+            <div class="label">Grad. Year</div>
+          </div>
+        </div>
+        <div class="kpi-bars" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─────────────────────────────────────────────── -->
+  <section id="about" aria-labelledby="about-heading">
+    <div class="wrap about-grid">
+      <div class="reveal-left" style="text-align:center;">
+        <div class="profile-photo-wrap">
+          <img
+            src="profile.png"
+            alt="Bhavin Suryavanshi — Aspiring Data Analyst"
+            class="profile-photo"
+            width="180"
+            height="180"
+            loading="lazy"
+          >
+        </div>
+        <div class="status-badge">
+          <span class="status-dot" aria-hidden="true"></span>
+          Open to Work
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="section-head">
+          <div class="eyebrow">About Me</div>
+          <h2 id="about-heading">Data-curious, dashboard-driven.</h2>
+        </div>
+        <p>I'm an aspiring Data Analyst currently pursuing my Bachelor of Computer Applications (BCA) at Sigma University. My focus is on turning raw, messy data into clear, decision-ready insight — using SQL for querying, Python for analysis, and Power BI / Excel for visualization.</p>
+        <p>I'm passionate about dashboard development and business intelligence, and I'm actively looking for internship and entry-level opportunities where I can apply and grow these skills on real business problems.</p>
+      </div>
+      <ul class="fact-list reveal-right">
+        <li><span class="k">Location</span><span class="v">Vadodara, Gujarat</span></li>
+        <li><span class="k">Degree</span><span class="v">BCA, Sigma University</span></li>
+        <li><span class="k">Semester</span><span class="v">5th · CGPA 7.46</span></li>
+        <li><span class="k">Graduation</span><span class="v">May 2027</span></li>
+        <li><span class="k">Focus</span><span class="v">SQL · Python · Power BI</span></li>
+        <li><span class="k">Looking for</span><span class="v">Internships / Entry-level</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ─── EXPERIENCE ────────────────────────────────────────── -->
+  <section id="experience" aria-labelledby="experience-heading">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Experience &amp; Practice</div>
+        <h2 id="experience-heading">Hands-on with real analytics workflows</h2>
+      </div>
+      <div class="timeline reveal">
+        <div class="t-item">
+          <span class="t-tag">Job Simulation · Forage</span>
+          <h3>Deloitte Australia — Data Analytics Job Simulation</h3>
+          <p style="font-size:0.94rem; color:var(--ink-1); margin:0;">Completed a simulated data analytics engagement covering data classification, forensic technology, and dashboard-style analysis in a real-world consulting context.</p>
+          <div class="pill-row">
+            <span class="pill">Data Analysis</span>
+            <span class="pill">Forensic Tech</span>
+            <span class="pill">Client Scenario</span>
+          </div>
+        </div>
+        <div class="t-item">
+          <span class="t-tag">Applied Learning</span>
+          <h3>Independent Analytics Projects</h3>
+          <ul>
+            <li>Built KPI and business analytics dashboards using SQL, Power BI and Excel.</li>
+            <li>Automated recurring reporting workflows using Python and SQL.</li>
+            <li>Practiced data cleaning, transformation and visualization end-to-end.</li>
+          </ul>
+          <div class="pill-row">
+            <span class="pill">SQL</span>
+            <span class="pill">Power BI</span>
+            <span class="pill">Python</span>
+            <span class="pill">Excel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EDUCATION ─────────────────────────────────────────── -->
+  <section id="education" aria-labelledby="education-heading">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Education</div>
+        <h2 id="education-heading">Academic background</h2>
+      </div>
+      <div class="edu-card reveal-scale">
+        <div>
+          <h3>Bachelor of Computer Applications (BCA)</h3>
+          <div class="sub">Sigma University · Expected Graduation May 2027</div>
+        </div>
+        <div class="edu-stats">
+          <div>
+            <div class="num">5th</div>
+            <div class="lbl">Semester</div>
+          </div>
+          <div>
+            <div class="num">7.46</div>
+            <div class="lbl">CGPA</div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="cert-list stagger-children">
+        <li class="reveal" style="--i:0">Deloitte Australia — Data Analytics Job Simulation (Forage)</li>
+        <li class="reveal" style="--i:1">SQL Certification — SkillCourse</li>
+        <li class="reveal" style="--i:2">Power BI Micro Course</li>
+        <li class="reveal" style="--i:3">Data to Dashboard in Power BI — SkillCourse (3-Hour Live Workshop)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ──────────────────────────────────────────── -->
+  <section id="projects" aria-labelledby="projects-heading">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Projects</div>
+        <h2 id="projects-heading">Selected work</h2>
+      </div>
+      <div class="project-grid">
+        <div class="project-card reveal" style="--i:0" id="project-kpi-dashboard">
+          <span class="idx">01 · SQL / Power BI / Excel</span>
+          <h3>KPI &amp; Business Analytics Dashboard</h3>
+          <ul>
+            <li>Developed interactive dashboards using KPIs and business metrics.</li>
+            <li>Performed data cleaning, transformation and visualization.</li>
+            <li>Generated insights to support data-driven decision making.</li>
+          </ul>
+          <div class="pill-row">
+            <span class="pill">SQL</span>
+            <span class="pill">Power BI</span>
+            <span class="pill">Excel</span>
+          </div>
+        </div>
+        <div class="project-card reveal" style="--i:1" id="project-reporting-automation">
+          <span class="idx">02 · Python / SQL / Excel</span>
+          <h3>Reporting Automation System</h3>
+          <ul>
+            <li>Developed interactive dashboards using KPIs and business metrics.</li>
+            <li>Performed data cleaning, transformation and visualization.</li>
+            <li>Generated insights to support data-driven decision making.</li>
+          </ul>
+          <div class="pill-row">
+            <span class="pill">Python</span>
+            <span class="pill">SQL</span>
+            <span class="pill">Excel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ────────────────────────────────────────────── -->
+  <section id="skills" aria-labelledby="skills-heading">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Skills</div>
+        <h2 id="skills-heading">Toolkit</h2>
+      </div>
+      <div class="skills-grid stagger-children">
+        <div class="skill-cat reveal" style="--i:0">
+          <h4>Programming</h4>
+          <div class="skill-tags"><span>Python</span><span>SQL</span></div>
+        </div>
+        <div class="skill-cat reveal" style="--i:1">
+          <h4>Visualization</h4>
+          <div class="skill-tags"><span>Power BI</span><span>Excel</span></div>
+        </div>
+        <div class="skill-cat reveal" style="--i:2">
+          <h4>Analytics</h4>
+          <div class="skill-tags"><span>Data Analysis</span><span>Dashboard Development</span></div>
+        </div>
+        <div class="skill-cat reveal" style="--i:3">
+          <h4>Excel</h4>
+          <div class="skill-tags"><span>Pivot Tables</span><span>XLOOKUP</span><span>Power Query</span></div>
+        </div>
+        <div class="skill-cat reveal" style="--i:4">
+          <h4>Database</h4>
+          <div class="skill-tags"><span>MySQL</span></div>
+        </div>
+        <div class="skill-cat reveal" style="--i:5">
+          <h4>Libraries &amp; Tools</h4>
+          <div class="skill-tags"><span>Pandas</span><span>NumPy</span><span>VS Code</span><span>Git</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ACHIEVEMENTS ──────────────────────────────────────── -->
+  <section id="achievements" aria-labelledby="achievements-heading">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Achievements</div>
+        <h2 id="achievements-heading">Milestones so far</h2>
+      </div>
+      <div class="achieve-grid stagger-children">
+        <div class="achieve-card reveal" style="--i:0">
+          <div class="num" data-count="2" data-prefix="0">0</div>
+          <p>Academic data analytics projects built end-to-end, from raw data to dashboard.</p>
+        </div>
+        <div class="achieve-card reveal" style="--i:1">
+          <div class="num" data-count="4" data-prefix="0">0</div>
+          <p>Certifications completed in SQL, Power BI and applied data analytics.</p>
+        </div>
+        <div class="achieve-card reveal" style="--i:2">
+          <div class="num">↑</div>
+          <p>Continuously improving SQL, Power BI and Python skills through practice.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ───────────────────────────────────────────── -->
+  <section id="contact" aria-labelledby="contact-heading">
+    <div class="wrap">
+      <div class="contact-box reveal-scale">
+        <div class="eyebrow" style="justify-content:center;">Contact</div>
+        <h2 id="contact-heading">Let's talk data.</h2>
+        <p>Open to internship and entry-level Data Analyst roles. Reach out by email or phone, or connect on LinkedIn / GitHub.</p>
+        <div class="contact-links">
+          <a class="btn btn-primary" href="mailto:bhavinsuryavanshi713@gmail.com" id="btn-email">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email Me
+          </a>
+          <a class="btn btn-ghost" href="tel:+918511812257" id="btn-phone">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +91 85118 12257
+          </a>
+          <a class="btn btn-ghost" href="www.linkedin.com/in/
+bhavinsuryavanshi
+" target="_blank" rel="noopener noreferrer" id="btn-linkedin">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a class="btn btn-ghost" href="https://github.com/bhavin-suryavanshi" target="_blank" rel="noopener noreferrer" id="btn-github">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+        </div>
+
+        <div class="contact-divider"></div>
+
+        <!-- Contact Form -->
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+          <div class="form-group">
+            <label for="contact-name">Your Name</label>
+            <input type="text" id="contact-name" name="name" placeholder="Jane Doe" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email Address</label>
+            <input type="email" id="contact-email" name="email" placeholder="jane@company.com" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" placeholder="Hi Bhavin, I'd like to discuss a data analyst opportunity..." required></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary" id="btn-send-message">
+              <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Message
+            </button>
+          </div>
+          <div class="form-status" id="formStatus" aria-live="polite"></div>
+        </form>
+
+        <div class="form-note">Based in Vadodara, Gujarat, India</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ─── FOOTER ─────────────────────────────────────────────── -->
+<footer role="contentinfo">
+  <div class="wrap">
+    © <span id="year"></span> Bhavin Suryavanshi. Built with clean data and a little Power Query magic.
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Scroll back to top" title="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <polyline points="18 15 12 9 6 15"/>
+  </svg>
+</button>
+
+<!-- Scripts -->
+<script src="script.js"></script>
+
+</body>
+</html>
